@@ -127,5 +127,9 @@
       }
     }
   },
-  "defaultProject": "angular-ngrx"
+  "defaultProject": "angular-ngrx",
+  "cli": {
+    "analytics": "7c2b0e0c-1ea8-42ff-ba37-5dd1ecdfcb10",
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

@@ -5,20 +5,18 @@ import { catchError, tap, map } from 'rxjs/operators';
 import { IUser } from './user';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-
   private userUrl = 'assets/users.json';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getUsers(): Observable<IUser[]> {
-    return this.http.get<IUser[]>(this.userUrl)
-      .pipe(
-        tap(data => console.log('All: ' + JSON.stringify(data))),
-        catchError(this.handleError)
-      );
+    return this.http.get<IUser[]>(this.userUrl).pipe(
+      tap((data) => console.log('All: ' + JSON.stringify(data))),
+      catchError(this.handleError)
+    );
   }
 
   private handleError(err: HttpErrorResponse) {

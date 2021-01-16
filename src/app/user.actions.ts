@@ -1,6 +1,5 @@
 import { Action } from '@ngrx/store';
 import { IUser } from './user';
-
 export enum UserActionTypes {
   LoadUsers = '[User] Load Users',
   LoadUsersSuccess = '[User] Load Users Success',
